@@ -8,11 +8,11 @@ The solution is obtained iteratively. At first, we split the histogram in two us
 
 ### Usage
 
-The implementation works on grayscale images and outputs a binary image (logical matrix).
+The implementation works on grayscale images and produces a binary image `out` (logical matrix), and the threshold value `t` that was chosen.
 
 ```matlab
-t = threshold(img);
-figure; imshow(t);
+[out, t] = threshold(img);
+figure; imshow(out);
 ```
 
 ![](original.png) <br> Original | ![](threshold.png) <br> Threshold

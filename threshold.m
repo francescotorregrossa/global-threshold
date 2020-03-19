@@ -1,4 +1,4 @@
-function [new_img, threshold, dx, dy] = threshold(img)
+function [out, threshold] = threshold(img)
 
 dx = conv2(img, [1 2 1]', 'same');
 dx = conv2(dx, [-1 0 1], 'same');
@@ -39,6 +39,6 @@ while 1
     
 end
 
-new_img = magnitude > threshold;
+out = magnitude > threshold;
 
 end
